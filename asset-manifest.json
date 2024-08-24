@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fazni-faiz/fazni_portfolio.git/static/css/main.e6c13ad2.css",
+    "main.js": "/fazni-faiz/fazni_portfolio.git/static/js/main.c608284a.js",
+    "index.html": "/fazni-faiz/fazni_portfolio.git/index.html",
+    "main.e6c13ad2.css.map": "/fazni-faiz/fazni_portfolio.git/static/css/main.e6c13ad2.css.map",
+    "main.c608284a.js.map": "/fazni-faiz/fazni_portfolio.git/static/js/main.c608284a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.c608284a.js"
+  ]
+}
