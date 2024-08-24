@@ -1,22 +1,24 @@
 import React from 'react';
 
-function Projects() {
+const Projects = () => {
   return (
-    <section id="projects" style={sectionStyle}>
-      <h2>Projects</h2>
-      <ul>
-        <li>Customer Satisfaction System Through Facial Emotions Using Computer Vision in Super Markets.</li>
-        <li>Front End Web Application for Sally Sweets Shop.</li>
-        <li>SecureVote: A Block Chain Powered Framework for Secure and Transparent Voting System in Sri Lanka.</li>
-      </ul>
+    <section id="projects" className="bg-white text-gray-900 p-8">
+      <div className="container mx-auto">
+        <h2 className="text-3xl font-semibold mb-4">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-gray-200 p-4 rounded">
+            <h3 className="text-xl font-semibold">Customer Satisfaction System</h3>
+            <p className="text-sm text-gray-700">Python, Open CV, TensorFlow, Pandas</p>
+          </div>
+          <div className="bg-gray-200 p-4 rounded">
+            <h3 className="text-xl font-semibold">Front End Web Application for Sally Sweets Shop</h3>
+            <p className="text-sm text-gray-700">Vue.JS, Tailwind CSS, JavaScript, Photoshop CS6</p>
+          </div>
+          
+        </div>
+      </div>
     </section>
   );
 }
-
-const sectionStyle = {
-  padding: '20px',
-  backgroundColor: '#fff',
-  margin: '10px 0'
-};
 
 export default Projects;

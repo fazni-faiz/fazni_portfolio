@@ -1,24 +1,24 @@
 import React from 'react';
 
-function Experience() {
+const Experience = () => {
   return (
-    <section id="experience" style={sectionStyle}>
-      <h2>Work Experience</h2>
-      <h3>Technical Instructor - Igniter Space (PVT) LTD</h3>
-      <p>February 2023 - Present</p>
-      <ul>
-        <li>Instructing individuals on innovation engineering, nurturing creativity, and enhancing problem-solving abilities.</li>
-        <li>Creating and evolving curriculum with a focus on Python programming.</li>
-        <li>Offering hands-on training and mentorship on IT and technology-related projects.</li>
-      </ul>
+    <section id="experience" className="bg-gray-100 text-gray-900 p-8">
+      <div className="container mx-auto">
+        <h2 className="text-3xl font-semibold mb-4">Work Experience</h2>
+        <div className="space-y-4">
+          <div>
+            <h3 className="text-xl font-semibold">Technical Instructor</h3>
+            <p className="text-sm text-gray-600">Igniter Space (PVT) LTD (February 2023 – Present)</p>
+            <ul className="list-disc list-inside">
+              <li>Instructing individuals on innovation engineering, nurturing creativity, and enhancing problem-solving abilities.</li>
+              <li>Creating and evolving curriculum and lesson plans, with a special focus on Python programming.</li>
+              <li>Offering hands-on training and mentorship on various IT and technology-related projects.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
-
-const sectionStyle = {
-  padding: '20px',
-  backgroundColor: '#fff',
-  margin: '10px 0'
-};
 
 export default Experience;
