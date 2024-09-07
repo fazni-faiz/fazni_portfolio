@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import fazniImage from '../img/fazni.jpeg';
 import { MenuIcon, XIcon } from '@heroicons/react/outline'; // Import Heroicons for the menu and close icons
 
 const Header = () => {
@@ -35,11 +34,6 @@ const Header = () => {
             <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
           </ul>
         </nav>
-
-        {/* Right Side: Image */}
-        <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden border-4 border-white mt-4 md:mt-0">
-          <img src={fazniImage} alt="Mohamed Fais Mohamed Fasni" className="w-full h-full object-cover"/>
-        </div>
       </div>
 
       {/* Decorative Element */}
