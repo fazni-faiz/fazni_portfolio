@@ -6,6 +6,8 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
+import 'animate.css';
+
 
 function App() {
   return (
