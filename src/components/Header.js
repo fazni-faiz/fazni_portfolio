@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // Updated imports
 
 const Header = () => {
@@ -6,9 +6,24 @@ const Header = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  // Close the menu if clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const menu = document.getElementById('mobile-menu');
+      if (menu && !menu.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className="bg-black text-white p-4 md:p-6 shadow-lg relative">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Left Side: Name and Mobile Menu Button */}
         <div className="flex items-center justify-between w-full md:w-auto">
           <h1 className="text-3xl md:text-4xl font-bold">FAZNI FAIZ</h1>
@@ -23,15 +38,16 @@ const Header = () => {
 
         {/* Navigation */}
         <nav
-          className={`fixed inset-0 bg-black bg-opacity-75 md:static md:bg-transparent md:flex md:items-center md:space-x-6 space-y-4 md:space-y-0 w-full md:w-auto transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'} md:translate-y-0`}
+          id="mobile-menu"
+          className={`fixed inset-0 bg-black bg-opacity-90 md:static md:bg-transparent md:flex md:items-center md:space-x-6 space-y-4 md:space-y-0 w-full md:w-auto transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'} md:translate-y-0`}
         >
-          <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-lg">
-            <li><a href="#profile" className="hover:text-gray-400">Profile</a></li>
-            <li><a href="#education" className="hover:text-gray-400">Education</a></li>
-            <li><a href="#experience" className="hover:text-gray-400">Experience</a></li>
-            <li><a href="#projects" className="hover:text-gray-400">Projects</a></li>
-            <li><a href="#skills" className="hover:text-gray-400">Skills</a></li>
-            <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
+          <ul className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-6 text-lg">
+            <li><a href="#profile" className="hover:text-gray-400" onClick={() => setIsMenuOpen(false)}>Profile</a></li>
+            <li><a href="#education" className="hover:text-gray-400" onClick={() => setIsMenuOpen(false)}>Education</a></li>
+            <li><a href="#experience" className="hover:text-gray-400" onClick={() => setIsMenuOpen(false)}>Experience</a></li>
+            <li><a href="#projects" className="hover:text-gray-400" onClick={() => setIsMenuOpen(false)}>Projects</a></li>
+            <li><a href="#skills" className="hover:text-gray-400" onClick={() => setIsMenuOpen(false)}>Skills</a></li>
+            <li><a href="#contact" className="hover:text-gray-400" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
           </ul>
         </nav>
       </div>
