@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline'; // Import Heroicons for the menu and close icons
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // Updated imports
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ const Header = () => {
             onClick={toggleMenu}
             className="md:hidden text-white focus:outline-none"
           >
-            {isMenuOpen ? <XIcon className="w-6 h-6"/> : <MenuIcon className="w-6 h-6"/>}
+            {isMenuOpen ? <XMarkIcon className="w-6 h-6"/> : <Bars3Icon className="w-6 h-6"/>}
           </button>
         </div>
 
