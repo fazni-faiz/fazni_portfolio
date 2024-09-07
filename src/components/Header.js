@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // Updated imports
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // Ensure you have the correct version
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,11 +36,17 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Navigation */}
+        {/* Mobile Menu with Close Button */}
         <nav
           id="mobile-menu"
           className={`fixed inset-0 bg-black bg-opacity-90 md:static md:bg-transparent md:flex md:items-center md:space-x-6 space-y-4 md:space-y-0 w-full md:w-auto transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'} md:translate-y-0`}
         >
+          <button
+            className="absolute top-4 right-4 text-white md:hidden"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <XMarkIcon className="w-8 h-8"/>
+          </button>
           <ul className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-6 text-lg">
             <li><a href="#profile" className="hover:text-gray-400" onClick={() => setIsMenuOpen(false)}>Profile</a></li>
             <li><a href="#education" className="hover:text-gray-400" onClick={() => setIsMenuOpen(false)}>Education</a></li>
