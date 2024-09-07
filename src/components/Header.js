@@ -1,24 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import fazniImage from '../img/fazni.jpeg';
+import { MenuIcon, XIcon } from '@heroicons/react/outline'; // Import Heroicons for the menu and close icons
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <header className="bg-black text-white p-4 md:p-6 shadow-lg relative">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Left Side: Name and Navigation */}
-        <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+        <div className="flex items-center justify-between w-full md:w-auto">
           <h1 className="text-3xl md:text-4xl font-bold">FAZNI FAIZ</h1>
-          <nav>
-            <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-lg">
-              <li><a href="#profile" className="hover:text-gray-400">Profile</a></li>
-              <li><a href="#education" className="hover:text-gray-400">Education</a></li>
-              <li><a href="#experience" className="hover:text-gray-400">Experience</a></li>
-              <li><a href="#projects" className="hover:text-gray-400">Projects</a></li>
-              <li><a href="#skills" className="hover:text-gray-400">Skills</a></li>
-              <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
-            </ul>
-          </nav>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden text-white focus:outline-none"
+          >
+            {isMenuOpen ? <XIcon className="w-6 h-6"/> : <MenuIcon className="w-6 h-6"/>}
+          </button>
         </div>
+
+        {/* Navigation */}
+        <nav
+          className={`flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 w-full md:w-auto transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'} md:translate-y-0`}
+        >
+          <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-lg">
+            <li><a href="#profile" className="hover:text-gray-400">Profile</a></li>
+            <li><a href="#education" className="hover:text-gray-400">Education</a></li>
+            <li><a href="#experience" className="hover:text-gray-400">Experience</a></li>
+            <li><a href="#projects" className="hover:text-gray-400">Projects</a></li>
+            <li><a href="#skills" className="hover:text-gray-400">Skills</a></li>
+            <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
+          </ul>
+        </nav>
 
         {/* Right Side: Image */}
         <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden border-4 border-white mt-4 md:mt-0">
