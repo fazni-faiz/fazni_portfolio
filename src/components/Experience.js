@@ -8,9 +8,12 @@ const experiences = [
     company: "Federation for Environment, Climate, and Technology",
     period: "June 2024 – Present",
     responsibilities: [
-      "Instructing individuals on innovation engineering, nurturing creativity, and enhancing problem-solving abilities.",
-      "Creating and evolving curriculum and lesson plans, with a special focus on Python programming.",
-      "Offering hands-on training and mentorship on various IT and technology-related projects."
+      "Developing responsive websites using HTML, CSS, and React, ensuring cross-browser compatibility and mobile optimization.",
+      "Designing and managing WordPress websites, customizing themes and plugins to meet project specifications.",
+      "Creating cross platform mobile applications using React Native and Flutter delivering seamless user experiences.",
+      "Implementing SEO best practices to improve website visibility and organic search rankings.",
+      "Collaborating with cross-functional teams to ensure timely and efficient delivery of web and mobile projects."
+      
     ]
   },
   {
@@ -29,7 +32,7 @@ const Experience = () => {
   return (
     <section id="experience" className="bg-gray-100 text-gray-900 p-8">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold mb-8 text-center">Work Experience</h2>
+      <h2 className="text-4xl font-extrabold mb-8 text-center animate__animated animate__fadeIn animate__delay-1s">Work Experience</h2>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <motion.div

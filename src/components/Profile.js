@@ -7,12 +7,25 @@ const Profile = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         {/* Text Section */}
         <div className="md:w-1/2 md:pr-8 mb-6 md:mb-0">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-4 animate__animated animate__fadeIn">
+        <h2 className="text-4xl font-extrabold mb-8 text-left animate__animated animate__fadeIn animate__delay-1s">
             Profile
           </h2>
           <p className="text-base md:text-xl leading-relaxed animate__animated animate__fadeIn animate__delay-1s">
-            As an aspiring Computer Science Undergraduate, I am dedicated to developing my skills in coding, problem-solving, and data analytics. I am a quick learner, a team player, and have experience working with different programming languages and tools.
-          </p>
+          A dedicated and results-oriented
+software engineering
+professional with a BSc (Hons) in
+Computer Science (2nd Class
+First Division) and a strong
+background in coding, problemsolving, and data analytics.
+Possesses experience across
+multiple programming
+languages, web technologies,
+and frameworks. Adept at
+collaborating in team
+environments, eager to
+contribute to innovative projects
+in software development and
+data analytics </p>
         </div>
 
         {/* Image Section */}
