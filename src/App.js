@@ -6,6 +6,7 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
+import ContactMe from './components/contactme';
 import 'animate.css';
 
 
@@ -14,10 +15,12 @@ function App() {
     <div className="App">
       <Header />
       <Profile />
+
       <Experience />
       <Education />
       <Projects />
       <Skills />
+      <ContactMe />
       <Footer />
     </div>
   );
