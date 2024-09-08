@@ -50,7 +50,7 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section id="education" className="bg-white text-gray-900 p-8">
+    <section id="education"  className="bg-gray-200 text-gray-900 p-8 relative overflow-hidden">
       <div className="container mx-auto">
         <h2 className="text-3xl font-semibold mb-8">Education</h2>
         <div className="space-y-8">
